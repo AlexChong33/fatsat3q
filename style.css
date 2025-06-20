@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+:root {
+    --main-color: #02277F;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.bg-main {
+    background-color: var(--main-color);
+}
+
+.border-main {
+    border-color: var(--main-color);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+    color: var(--main-color);
+    scroll-margin-top: 6rem; /* Offset for sticky header/nav */
+}
+
+.prose a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.prose a:hover {
+    color: #033db8;
+    text-decoration: underline;
+}
+
+/* Table styling */
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.prose th, .prose td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.prose th {
+    background-color: #f3f4f6; /* Light gray for headers */
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.prose tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.prose td {
+    font-size: 0.9em;
+}
+
+/* TOC Styling */
+#toc a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #4b5563;
+    transition: all 0.2s ease-in-out;
+    border-left: 3px solid transparent;
+}
+
+#toc a:hover {
+    background-color: #f3f4f6;
+    color: var(--main-color);
+}
+
+#toc a.active {
+    background-color: #eef2ff;
+    color: var(--main-color);
+    font-weight: 500;
+    border-left-color: var(--main-color);
+}
+
+#back-to-top {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
